@@ -1,0 +1,484 @@
+#homePage {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#aboutMe {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#familyPage {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*STRUCTURE*/
+
+main {
+
+    /* step 1 */
+    display: grid;
+
+    /* step 2 */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    /* step 3 */
+    grid-template-areas:
+        "Eddiehomepage Eddiehomepage  Eddietitle Eddietitle Eddietitle"
+        "Eddiepic Eddiepic Eddiepara Eddiepara Eddiepara";
+}
+
+main2 {
+
+    /* step 1 */
+    display: grid;
+
+    /* step 2 */
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: auto;
+
+    /* step 3 */
+    grid-template-areas:
+        "Eddiehomepage Eddietitle Eddietitle Eddietitle Eddietitle"
+        "Familypic Familypic Familypic Familypic Familypic";
+}
+
+
+
+
+/* Index page */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1 img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.column1 {
+    flex: 20%;
+    text-align: center;
+    margin: 4% 0 0 0;
+    max-height: 500%;
+    max-width: auto;
+}
+
+.column2 {
+    opacity: 0;
+    flex: 33.33%;
+    align-self: flex-end;
+    margin: -80% 0 0 5%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.column2 p {
+    opacity: 0;
+    position: relative;
+    margin: -32% 0 0 17%;
+    font-size: 30px;
+    right: 12%;
+    animation-name: delayPadding;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+.column2 img{
+    margin: -70% 0 0 10%;
+}
+
+.column3 {
+    opacity: 0;
+    flex: 33.33%;
+    padding: 5px;
+    margin: 10% 0 0 5%;
+    align-self: flex-start;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.column3 p {
+    opacity: 0;
+    position: relative;
+    margin: -32% 0 0 0;
+    font-size: 30px;
+    right: 12%;
+    animation-name: delayPadding;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* About Me page */
+
+.footer1 {
+    opacity: 0;
+    position: relative;
+    left: 85%;
+    width: 50px;
+    margin: 4% 0 0 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.footer1 img {
+    width: 220%;
+}
+
+#maineddie {
+    opacity: 0;
+    grid-area: Eddiepic;
+    width: 110%;
+    margin: 0 0 0 0;
+}
+
+
+.eddie1 {
+    grid-area: Eddiepara;
+}
+
+
+.eddie1 {
+    opacity: 0;
+    background-image: url(../images/speechbubble.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: top;
+    margin: 5% 0 0 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.eddie1 p {
+    opacity: 0;
+    padding: 10% 20% 0 20%;
+    animation-name: delayPadding;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes delayPadding {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.eddie2 {
+    grid-area: Eddiehomepage;
+    border-radius: 0;
+    height: 120px;
+    padding-left: 5px;
+}
+
+.eddie2 img {
+    width: 20%;
+}
+
+#aboutMe h2 {
+    grid-area: Eddietitle;
+    font-family: 'Pangolin';
+    font-style: cursive;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 20px;
+    color: #000000;
+    margin: 5% 0 0 0;
+}
+
+p {
+    font-family: 'Patrick Hand';
+    font-style: cursive;
+    text-align: center;
+    font-weight: 500;
+    font-size: 23px;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: #000000;
+    margin-top: 5%;
+    margin: 0%;
+
+}
+
+/* Meet my Family page */
+
+#familyPage h2 {
+    grid-area: Eddietitle;
+    font-family: 'Pangolin';
+    font-style: cursive;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 20px;
+    color: #000000;
+    margin: 5% 0 0 12%;
+}
+
+#familytree {
+    opacity: 0;
+    grid-area: Familypic;
+    width: 44%;
+    margin: 0 0 0 28%;
+}
+
+.eddie3 {
+    grid-area: Eddiehomepage;
+    border-radius: 0;
+    height: 120px;
+    padding-left: 5px;
+}
+
+.eddie3 img {
+    width: 32%;
+}
+
+.rightbubble {
+    opacity: 0;
+    position: relative;
+    left: 270%;
+    margin: -185% 0 0 20%;
+    background-image: url(../images/rightbubble.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 90%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+.rightbubble p {
+    opacity: 0;
+    padding: 10% 0 0 0;
+    font-size: 25px;
+    animation-name: delayPadding;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.footer2 {
+    opacity: 0;
+    position: relative;
+    left: 264%;
+    width: 50px;
+    margin: -50% 0 0 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.footer2 img {
+    width: 220%;
+}
+
+
+/*** Media Query ***/
+
+@media screen and (max-width: 440px) {
+
+    /* Index page */
+    
+    .row {
+        flex-direction: column;
+      }
+    
+    .column1 img {
+        margin: 7% 0 0 0;
+        vertical-align: middle;
+    }
+
+    .column1 {
+        order: 1;
+        flex: 100%;
+        text-align: center;
+        margin: 30% 15% 0 15%;
+        max-width: 60%;
+    }
+
+    .column2 img {
+        margin: 15% 0 5% 10%;
+    }
+
+    .column2 {
+        order: 2;
+        flex: 100%;
+        align-self: flex-end;
+        margin: 0 0 23% 5%;
+        max-width: 200%;
+        max-height: 300%;
+    }
+
+    .column2 p {
+        position: relative;
+        margin: -38% 0 0 18%;
+        font-size: 23px;
+        right: 12%;
+
+    }
+
+    .column3 img {
+        margin: 8% 0 6% 10%;
+    }
+
+    .column3 {
+        order: 0;
+        flex: 100%;
+        padding: 5px;
+        margin: 6% 0 0 5%;
+        align-self: flex-start;
+        max-width: 200%;
+    }
+
+    .column3 p {
+        position: relative;
+        margin: -37% 0 0 18%;
+        font-size: 23px;
+        right: 12%;
+    }
+
+    /* About Me page */
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "Eddiehomepage Eddiehomepage"
+            "Eddietitle Eddietitle"
+            "Eddiepic Eddiepic"
+            "Eddiepara Eddiepara"
+    }
+
+    .footer1 {
+        left: 35%;
+        width: 50px;
+        margin: 10% 0 0 0;
+    }
+
+    .footer1 img {
+        width: 220%;
+    }
+
+    #maineddie {
+        width: 100%;
+        margin: 10% 0 0 0;
+
+    }
+
+    .eddie1 {
+        background-image: url(../images/pinkrectangle.png);
+        background-size: 85%;
+        margin: 10% 0 0 0;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+
+
+    .eddie1 p {
+        padding: 10% 10% 0 10%;
+
+    }
+
+    .eddie2 img {
+        width: 30%;
+    }
+
+    #aboutMe h2 {
+        font-size: 45px;
+        margin: 0 0 0 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 26px;
+
+    }
+
+
+    /* Meet my Family page */
+
+    main2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "Eddiehomepage Eddiehomepage"
+            "Eddietitle Eddietitle"
+            "Familypic Familypic"
+    }
+
+    .footer2 {
+        left: -25%;
+        width: 50px;
+        margin: 7% 0 0 0;
+    }
+
+    .footer2 img {
+        width: 220%;
+    }
+
+    #familytree {
+        width: 103%;
+        margin: 60% 0 0 0;
+    }
+
+    .eddie3 img {
+        width: 30%;
+    }
+
+    #familyPage h2 {
+        font-size: 42px;
+        margin: 5% 0 0 3%;
+        text-align: center;
+    }
+
+    .rightbubble {
+        left: 6%;
+        margin: -290% 0 0 20%;
+        width: 150%;
+    }
+
+    .rightbubble p {
+        font-size: 23px;
+
+    }
+}
